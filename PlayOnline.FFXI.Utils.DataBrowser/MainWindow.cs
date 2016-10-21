@@ -222,7 +222,7 @@ namespace PlayOnline.FFXI.Utils.DataBrowser
             }
             for (int i = 1; i < 20; ++i)
             {
-                string DataDir = Path.Combine(POL.GetApplicationPath(appID), "Rom");
+                string DataDir = Path.Combine(POL.GetApplicationPath(appID), "ROM");
                 if (i > 1)
                 {
                     DataDir += i.ToString();

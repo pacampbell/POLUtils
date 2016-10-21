@@ -310,12 +310,13 @@ namespace PlayOnline.FFXI.Things
             this.Clear();
             try
             {
-                byte[] Bytes = BR.ReadBytes(0x50);
-                if (Bytes[0x3] != 0x00 || Bytes[0x5] != 0x00 || Bytes[0x7] != 0x00 || Bytes[0x9] != 0x00 || Bytes[0xe] != (0xFF) ||
+                byte[] Bytes = BR.ReadBytes(0x80);
+                /*if (Bytes[0x3] != 0x00 || Bytes[0x5] != 0x00 || Bytes[0x7] != 0x00 || Bytes[0x9] != 0x00 || Bytes[0xe] != (0xFF) ||
                     Bytes[0x3f] != 0xff)
                 {
                     return false;
                 }
+                */
                 if (!FFXIEncryption.DecodeDataBlockMask(Bytes))
                 {
                     return false;
